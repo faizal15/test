@@ -1,0 +1,4 @@
+---
+
+script_name: script.rpm.sh
+gitlab_repo_package: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/{{ script_name }}

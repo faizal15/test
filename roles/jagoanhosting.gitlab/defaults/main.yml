@@ -1,0 +1,5 @@
+---
+# defaults file for jagoanhosting.gitlab
+
+gitlab_domain: ""
+gitlab_external_url: "http://{{ gitlab_domain }}"
