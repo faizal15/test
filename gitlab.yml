@@ -1,7 +1,8 @@
 ---
 
 - name: Prepare server
-  hosts: local
+  hosts: localhost
+  connection: local
   gather_facts: no
   tasks:
   - name: Wait 300 seconds for target connection to become reachable/usable
