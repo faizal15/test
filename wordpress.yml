@@ -17,7 +17,7 @@
       - name: wp_user
         host: "%"
         password: Jagoan123
-        priv: "wp_user.*:ALL"
+        priv: "wp_db.*:ALL"
     apache_vhosts:
       - { servername: "vm.spearcrow.com", documentroot: "/var/www/vhosts/vmspearcrowcom" }
     wordpress_installs:
