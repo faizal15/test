@@ -1,0 +1,42 @@
+---
+
+- name: Install Wordpress on server
+  hosts: all
+
+  roles:
+    - ansible-role-php-master
+    - ansible-role-mysql-master
+    - ansible-role-apache-master
+    - ansible-wordpress-master
+  vars:
+    mysql_root_password: Jago4n123@
+    mysql_databases:
+      - name: wp_db
+        encoding: latin1
+        collation: latin1_general_ci
+    mysql_users:
+      - name: wp_user
+        host: "%"
+        password: Jagoan123
+        priv: "wp_user.*:ALL"
+    apache_vhosts:
+      - { servername: "vm.spearcrow.com", documentroot: "/var/www/vhosts/vmspearcrowcom" }
+    wordpress_installs:
+      - name: wordpress
+        dbname: wp_db
+        dbuser: wp_user
+        dbpass: 'Jagoan123'
+        dbhost: localhost
+        path: /var/www
+        url: http://vm.spearcrow.com
+        title: wordpress
+        admin_name: admin
+        admin_email: root@localhost.localdomain
+        admin_password: 'Jagoan123'
+        themes:
+          - name: twentytwelve
+            activate: true
+        plugins: [ ]
+        users: { }
+        options: [ ]
+        queries: [ ]

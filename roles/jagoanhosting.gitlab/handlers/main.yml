@@ -1,4 +1,0 @@
----
-
-- name: restart gitlab
-  command: gitlab-ctl reconfigure
