@@ -4,9 +4,7 @@
   hosts: all
 
   roles:
-    - ansible-role-php-master
     - ansible-role-mysql-master
-    - ansible-role-apache-master
     - ansible-wordpress-master
   vars:
     mysql_root_password: Jago4n123@
