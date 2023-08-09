@@ -19,14 +19,14 @@
         password: Jagoan123
         priv: "wp_db.*:ALL"
     apache_vhosts:
-      - { servername: "vm.spearcrow.com", documentroot: "/var/www/vhosts/vmspearcrowcom" }
+      - { servername: "vm.spearcrow.com", documentroot: "/var/www/vmspearcrowcom" }
     wordpress_installs:
       - name: wordpress
         dbname: wp_db
         dbuser: wp_user
         dbpass: 'Jagoan123'
         dbhost: localhost
-        path: /var/www
+        path: /var/www/vmspearcrowcom
         url: http://vm.spearcrow.com
         title: wordpress
         admin_name: admin
