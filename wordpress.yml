@@ -1,7 +1,8 @@
 ---
 
 - name: Install Wordpress on server
-  hosts: all
+  hosts: localhost
+  connection: local
 
   roles:
     - ansible-role-mysql-master
