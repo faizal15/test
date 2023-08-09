@@ -9,6 +9,7 @@
     - ansible-role-mysql-master
     - ansible-wordpress-master
   vars:
+    apache_vhosts_filename: "000-default.conf"
     mysql_root_password: Jago4n123@
     mysql_databases:
       - name: wp_db
