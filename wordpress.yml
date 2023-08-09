@@ -5,6 +5,7 @@
   connection: local
 
   roles:
+    - ansible-role-apache-master
     - ansible-role-mysql-master
     - ansible-wordpress-master
   vars:
