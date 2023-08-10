@@ -1,11 +1,11 @@
 ---
 
-- name: Configure Wordpress Title
-  command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli info
+- name: Update prefix table on wp-config
+  ansible.builtin.lineinfile:
+    path: "{{ wordpress_wp_cli_install_dir }}/wp-config.php"
+    regexp: "^table_prefix = "
+    line: "$table_prefix = '{{ sql_table_prefix }}';"
 
-#- name: Change wordpress table prefix
-#
 - name: Replace Old URL
   command: >-
     {{ wordpress_wp_cli_install_dir }}/wp-cli search-replace "{{ sql_old_url }}" "{{ wordpress_fqdndomain }}" --path="{{ wordpress_install_dir }}" --allow-root
