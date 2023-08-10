@@ -1,0 +1,6 @@
+---
+
+- include: importing_content.yml
+
+- include: configure_wp.yml
+

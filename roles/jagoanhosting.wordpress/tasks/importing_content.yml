@@ -1,0 +1,33 @@
+---
+
+- name: Extracting Content
+  unarchive:
+    src: wp-content.zip
+    dest: "{{ wordpress_install_dir }}"
+    creates: "{{ wordpress_install_dir }}/wp-content/themes/jnews/index.php"
+  delegate_to: localhost
+
+- name: Recreate Database [Drop Database].
+  mysql_db:
+    name: "{{ item.name }}"
+    collation: "{{ item.collation | default('utf8_general_ci') }}"
+    encoding: "{{ item.encoding | default('utf8') }}"
+    state: "absent"
+    target: "{{ item.target | default(omit) }}"
+  with_items: "{{ mysql_databases }}"
+
+- name: Recreate Database [Create Database].
+  mysql_db:
+    name: "{{ item.name }}"
+    collation: "{{ item.collation | default('utf8_general_ci') }}"
+    encoding: "{{ item.encoding | default('utf8') }}"
+    state: "{{ item.state | default('present') }}"
+    target: "{{ item.target | default(omit) }}"
+  with_items: "{{ mysql_databases }}"
+
+- name: Dump Database
+  mysql_db:
+    name: "{{ item.name }}"
+    state: import
+    target: "/{{ item.name }}/{{ item.name }}.sql"
+  with_items: "{{ mysql_databases }}"

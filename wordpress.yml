@@ -8,13 +8,15 @@
     - ansible-role-apache-master
     - ansible-role-mysql-master
     - ansible-wordpress-master
+    - ansible-role-wpcli-master
+    - jagoanhosting.wordpress
   vars:
     apache_vhosts_filename: "000-default.conf"
     mysql_root_password: Jago4n123@
-    mysql_databases:
-      - name: wp_db
-        encoding: latin1
-        collation: latin1_general_ci
+#    mysql_databases:
+#      - name: wp_db
+#        encoding: latin1
+#        collation: latin1_general_ci
     mysql_users:
       - name: wp_user
         host: "%"

@@ -1,0 +1,15 @@
+---
+
+- name: Configure Wordpress Title
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli info
+
+#- name: Change wordpress table prefix
+#
+#- name: Replace Old URL
+#
+#- name: Update Blog Name
+#
+#- name: Update Blog Description
+#
+#- name: Update User Credentials

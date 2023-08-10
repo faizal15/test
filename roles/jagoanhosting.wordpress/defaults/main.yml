@@ -1,0 +1,7 @@
+---
+wordpress_install_dir:
+
+mysql_databases:
+  - name: portal_berita
+    encoding: latin1
+    collation: latin1_general_ci
