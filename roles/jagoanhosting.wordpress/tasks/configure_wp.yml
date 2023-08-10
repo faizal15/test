@@ -6,10 +6,22 @@
 
 #- name: Change wordpress table prefix
 #
-#- name: Replace Old URL
-#
-#- name: Update Blog Name
-#
-#- name: Update Blog Description
-#
-#- name: Update User Credentials
+- name: Replace Old URL
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli search-replace "{{ sql_old_url }}" "{{ wordpress_fqdndomain }}"
+
+- name: Update Blog Name
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli update blogname "{{ wordpress_blog_title }}"
+
+- name: Update Blog Description
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli update blogname "{{ wordpress_blog_description }}"
+
+- name: Update Admin Email
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli update admin_email "{{ wordpress_blog_admin_email }}"
+
+- name: Update User Credentials
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli user update admin --user_pass="{{ wordpress_blog_admin_password }}" --user_email="{{ wordpress_blog_admin_email }}" --skip-email

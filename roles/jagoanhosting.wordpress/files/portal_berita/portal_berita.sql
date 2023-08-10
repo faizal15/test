@@ -110,7 +110,7 @@ INSERT INTO `wpd3_options` (`option_id`, `option_name`, `option_value`, `autoloa
 (3, 'blogname', 'test', 'yes'),
 (4, 'blogdescription', '', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
-(6, 'admin_email', 'faizal@jagoanhosting.com', 'yes'),
+(6, 'admin_email', 'admin@namadomain.com', 'yes'),
 (7, 'start_of_week', '1', 'yes'),
 (8, 'use_balanceTags', '0', 'yes'),
 (9, 'use_smilies', '1', 'yes'),
@@ -1913,7 +1913,7 @@ CREATE TABLE `wpd3_usermeta` (
 --
 
 INSERT INTO `wpd3_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
-(1, 1, 'nickname', 'faizal'),
+(1, 1, 'nickname', 'admin'),
 (2, 1, 'first_name', ''),
 (3, 1, 'last_name', ''),
 (4, 1, 'description', ''),
@@ -1956,7 +1956,7 @@ CREATE TABLE `wpd3_users` (
 --
 
 INSERT INTO `wpd3_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'faizal', '$P$BoMGl/RZWV8dYCq59LGkHQ3Z52AFNb0', 'faizal', 'faizal@jagoanhosting.com', 'http://test-cloud-init.tikte.com', '2023-08-09 07:49:15', '', 0, 'faizal');
+(1, 'admin', '$P$BoMGl/RZWV8dYCq59LGkHQ3Z52AFNb0', 'admin', 'admin@namadomain.com', 'http://test-cloud-init.tikte.com', '2023-08-09 07:49:15', '', 0, 'admin');
 
 --
 -- Indexes for dumped tables

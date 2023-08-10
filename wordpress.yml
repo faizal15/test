@@ -7,13 +7,14 @@
   roles:
 #    - ansible-role-apache-master
 #    - ansible-role-mysql-master
-#    - ansible-wordpress-master
+    - ansible-wordpress-master
     - jagoanhosting.wordpress
   vars:
     wordpress_theme: "portal_berita"
     wordpress_domain: "vm.spearcrow.com"
     wordpress_install_dir: "/var/www/vmspearcrowcom"
     wordpress_blog_title: "Wordpress Title"
+    wordpress_blog_description: "Wordpress Description"
     wordpress_blog_admin_name: "admin"
     wordpress_blog_admin_email: "root@localhost.localdomain"
     wordpress_blog_admin_password: "Jagoan123"
