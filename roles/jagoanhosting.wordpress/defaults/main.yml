@@ -38,7 +38,7 @@ wordpress_installs:
     dbpass: "{{ wordpress_user_password }}"
     dbhost: localhost
     path: "{{ wordpress_install_dir }}"
-    url: "http://{{ wordpress_domain }}"
+    url: "{{ wordpress_fqdndomain }}"
     title: "{{ wordpress_blog_title }}"
     admin_name: "{{ wordpress_blog_admin_name }}"
     admin_email: "{{ wordpress_blog_admin_email }}"
