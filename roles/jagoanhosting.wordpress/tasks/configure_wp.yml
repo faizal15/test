@@ -12,15 +12,15 @@
 
 - name: Update Blog Name
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli post update blogname "{{ wordpress_blog_title }}" --path="{{ wordpress_install_dir }}" --allow-root
+    {{ wordpress_wp_cli_install_dir }}/wp-cli option update blogname "{{ wordpress_blog_title }}" --path="{{ wordpress_install_dir }}" --allow-root
 
 - name: Update Blog Description
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli post update blogname "{{ wordpress_blog_description }}" --path="{{ wordpress_install_dir }}" --allow-root
+    {{ wordpress_wp_cli_install_dir }}/wp-cli option update blogname "{{ wordpress_blog_description }}" --path="{{ wordpress_install_dir }}" --allow-root
 
 - name: Update Admin Email
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli post update admin_email "{{ wordpress_blog_admin_email }}" --path="{{ wordpress_install_dir }}" --allow-root
+    {{ wordpress_wp_cli_install_dir }}/wp-cli option update admin_email "{{ wordpress_blog_admin_email }}" --path="{{ wordpress_install_dir }}" --allow-root
 
 - name: Update User Credentials
   command: >-
