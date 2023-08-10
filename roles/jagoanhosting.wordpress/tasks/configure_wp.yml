@@ -8,20 +8,20 @@
 #
 - name: Replace Old URL
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli search-replace "{{ sql_old_url }}" "{{ wordpress_fqdndomain }}"
+    {{ wordpress_wp_cli_install_dir }}/wp-cli search-replace "{{ sql_old_url }}" "{{ wordpress_fqdndomain }}" --path="{{ wordpress_install_dir }}"
 
 - name: Update Blog Name
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli update blogname "{{ wordpress_blog_title }}"
+    {{ wordpress_wp_cli_install_dir }}/wp-cli update blogname "{{ wordpress_blog_title }}" --path="{{ wordpress_install_dir }}"
 
 - name: Update Blog Description
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli update blogname "{{ wordpress_blog_description }}"
+    {{ wordpress_wp_cli_install_dir }}/wp-cli update blogname "{{ wordpress_blog_description }}" --path="{{ wordpress_install_dir }}"
 
 - name: Update Admin Email
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli update admin_email "{{ wordpress_blog_admin_email }}"
+    {{ wordpress_wp_cli_install_dir }}/wp-cli update admin_email "{{ wordpress_blog_admin_email }}" --path="{{ wordpress_install_dir }}"
 
 - name: Update User Credentials
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli user update admin --user_pass="{{ wordpress_blog_admin_password }}" --user_email="{{ wordpress_blog_admin_email }}" --skip-email
+    {{ wordpress_wp_cli_install_dir }}/wp-cli user update admin --user_pass="{{ wordpress_blog_admin_password }}" --user_email="{{ wordpress_blog_admin_email }}" --skip-email --path="{{ wordpress_install_dir }}"
