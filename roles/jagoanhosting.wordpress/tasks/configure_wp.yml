@@ -18,7 +18,11 @@
   command: >-
     {{ wordpress_wp_cli_install_dir }}/wp-cli option update blogname "{{ wordpress_blog_description }}" --path="{{ wordpress_install_dir }}" --allow-root
 
-- name: Update Blog Description
+- name: Flush Permalink
+  command: >-
+    {{ wordpress_wp_cli_install_dir }}/wp-cli rewrite flush --path="{{ wordpress_install_dir }}" --allow-root
+
+- name: Rewrite permalink
   command: >-
     {{ wordpress_wp_cli_install_dir }}/wp-cli rewrite structure '/%postname%' --path="{{ wordpress_install_dir }}" --allow-root
 
