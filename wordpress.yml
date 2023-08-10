@@ -6,6 +6,7 @@
 
   roles:
     - ansible-role-apache-master
+    - ansible-role-php-master
     - ansible-role-mysql-master
     - ansible-wordpress-master
     - jagoanhosting.wordpress
@@ -26,9 +27,9 @@
     wordpress_blog_admin_password: "Jagoan123"
     # Basic Variable from Ansible Role
     php_packages_extra:
-      - php81-gd
-      - php81-imagick
       - php-curl
+      - php-imagick
+      - php-gd
     apache_vhosts_filename: "000-default.conf"
     mysql_root_password: Jago4n123@
     mysql_databases:
