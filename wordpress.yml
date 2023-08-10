@@ -8,7 +8,6 @@
     - ansible-role-apache-master
     - ansible-role-mysql-master
     - ansible-wordpress-master
-    - ansible-role-wpcli-master
     - jagoanhosting.wordpress
   vars:
     apache_vhosts_filename: "000-default.conf"
