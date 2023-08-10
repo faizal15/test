@@ -2,7 +2,7 @@
 
 - name: Update prefix table on wp-config
   ansible.builtin.lineinfile:
-    path: "{{ wordpress_wp_cli_install_dir }}/wp-config.php"
+    path: "{{ wordpress_install_dir }}/wp-config.php"
     regexp: "^table_prefix = "
     line: "$table_prefix = '{{ sql_table_prefix }}';"
 
