@@ -24,7 +24,7 @@
 
 - name: Rewrite permalink
   command: >-
-    {{ wordpress_wp_cli_install_dir }}/wp-cli rewrite structure '/%postname%' --path="{{ wordpress_install_dir }}" --allow-root
+    {{ wordpress_wp_cli_install_dir }}/wp-cli rewrite structure '/%postname%/' --path="{{ wordpress_install_dir }}" --allow-root
 
 - name: Update Admin Email
   command: >-
