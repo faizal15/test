@@ -1,60 +1,60 @@
 # tasks file
 ---
-- include_task: wp-cli.yml
+- include_tasks: wp-cli.yml
   tags:
     - configuration
     - wordpress
     - wordpress-wp-cli
 
-- include_task: core.yml
+- include_tasks: core.yml
   tags:
     - configuration
     - wordpress
     - wordpress-core
 
-- include_task: configure.yml
+- include_tasks: configure.yml
   tags:
     - configuration
     - wordpress
     - wordpress-configure
 
-- include_task: wp-cron.yml
+- include_tasks: wp-cron.yml
   tags:
     - configuration
     - wordpress
     - wordpress-wp-cron
 
-- include_task: themes.yml
+- include_tasks: themes.yml
   tags:
     - configuration
     - wordpress
     - wordpress-themes
 
-- include_task: plugins.yml
+- include_tasks: plugins.yml
   tags:
     - configuration
     - wordpress
     - wordpress-plugins
 
-- include_task: users.yml
+- include_tasks: users.yml
   tags:
     - configuration
     - wordpress
     - wordpress-users
 
-- include_task: options.yml
+- include_tasks: options.yml
   tags:
     - configuration
     - wordpress
     - wordpress-options
 
-- include_task: queries.yml
+- include_tasks: queries.yml
   tags:
     - configuration
     - wordpress
     - wordpress-queries
 
-- include_task: chown.yml
+- include_tasks: chown.yml
   tags:
     - configuration
     - wordpress
