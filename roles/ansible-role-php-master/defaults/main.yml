@@ -75,9 +75,9 @@ php_use_managed_ini: true
 
 php_expose_php: "On"
 php_memory_limit: "256M"
-php_max_execution_time: "60"
+php_max_execution_time: "3100"
 php_max_input_time: "60"
-php_max_input_vars: "1000"
+php_max_input_vars: "2100"
 php_realpath_cache_size: "32K"
 
 php_file_uploads: "On"
