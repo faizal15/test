@@ -1,5 +1,5 @@
 ---
-- include: "vars/{{ wordpress_theme }}.yml"
+- include_vars: "vars/{{ wordpress_theme }}.yml"
 
 - include: importing_content.yml
 
