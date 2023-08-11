@@ -12,7 +12,7 @@
     - jagoanhosting.wordpress
   vars:
     # Required Variable
-    wordpress_theme: "portal_berita_olahraga"
+    wordpress_theme: "compro_food_truck"
     wordpress_domain: "vm.spearcrow.com"
     wordpress_domain_protocol: "http://"
     wordpress_fqdndomain: "{{ wordpress_domain_protocol }}{{ wordpress_domain }}"
